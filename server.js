@@ -3,7 +3,7 @@ var path = require("path");
 var app = express();
 var bodyParser = require('body-parser')
 
-app.listen(8080, () => console.log('http://localhost:8080'))
+app.listen(process.env.PORT || 3000, () => console.log('http://localhost:8080'))
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
